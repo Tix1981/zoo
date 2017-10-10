@@ -44,7 +44,10 @@ export class AnimalListComponent implements OnInit {
           "birthday": "15th February 2017."
       },
 
-
+      {
+          "animalType": "lion",
+          "name": "King"
+      },
 
   ]
 
