@@ -5,11 +5,12 @@
 			<td>Name</td>
 			<td>Birthday</td>
 		</tr>
-		<tr *ngFor="let animal of animals">
+		<tr *ngFor="let animal of animals; let index = index">
 			<td>{{ animal.animalType }}</td>
 			<td>{{ animal.name }}</td>
 			<td *ngIf="animal.birthday">{{ animal.birthday }}</td>
 			<td *ngIf="!animal.birthday">Unknown</td>
+            <td (click)="deleteRow(index)"><button type="button" name="button">Delete</button></td>
 		</tr>
 	</tbody>
 </table>

@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnimalListComponent implements OnInit {
 
+  deleteRow(index) {
+      this.animals.splice(index, 1);
+  }
+
   constructor() { }
 
   ngOnInit() {
