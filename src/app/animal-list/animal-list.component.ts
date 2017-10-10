@@ -9,10 +9,6 @@ import { Animal } from './animal';
 })
 export class AnimalListComponent implements OnInit {
 
-  deleteRow(index) {
-      this.animals.splice(index, 1);
-  }
-
   constructor() { }
 
   ngOnInit() {
@@ -27,5 +23,14 @@ export class AnimalListComponent implements OnInit {
       new Animal("lion", "king")
 
   ]
+
+  deleteRow(index) {
+      this.animals.splice(index, 1);
+  }
+
+  moveToTop(index) {
+      let row = this.animals.splice(index, 1);
+      this.animals.unshift(row[0]);
+  }
 
 }
