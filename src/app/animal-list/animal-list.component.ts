@@ -14,7 +14,7 @@ export class AnimalListComponent implements OnInit {
   ngOnInit() {
   }
 
-  animals:Array<Object> = [
+  animals:Array<Animal> = [
 
       new Animal("cow", "redcow", "2017"),
       new Animal("dog", "jackie", "1999"),
@@ -33,4 +33,10 @@ export class AnimalListComponent implements OnInit {
       this.animals.unshift(row[0]);
   }
 
+  newAnimal:Animal = new Animal('', '', '');
+
+  submitAnimal() {
+      this.animals.push(this.newAnimal);
+      this.newAnimal = new Animal('', '', '');
+  }
 }

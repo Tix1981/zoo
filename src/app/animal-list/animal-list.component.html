@@ -1,3 +1,12 @@
+<form action="#" (ngSubmit)="submitAnimal()">
+    <input type="text" name="species" [(ngModel)]="newAnimal.species" placeholder="Add species" />
+    <input type="text" name="name" [(ngModel)]="newAnimal.name" placeholder="Add name" />
+    <input type="text" name="dateOfBirth" [(ngModel)]="newAnimal.dateOfBirth" placeholder="Add date of birth" />
+    <button type="submit" name="button">Add animal</button>
+</form>
+
+
+
 <table >
 	<tbody>
 		<tr>
