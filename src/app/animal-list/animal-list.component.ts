@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Animal } from './animal';
+
 @Component({
   selector: 'app-animal-list',
   templateUrl: './animal-list.component.html',
@@ -18,40 +20,11 @@ export class AnimalListComponent implements OnInit {
 
   animals:Array<Object> = [
 
-      {
-          "animalType": "cow",
-          "name": "Red Cow",
-          "birthday": "1st January 2017."
-      },
-
-      {
-          "animalType": "dog",
-          "name": "Jackie",
-          "birthday": "1st February 2017."
-      },
-
-      {
-          "animalType": "cat",
-          "name": "Meow",
-          "birthday": "21st July 2017."
-      },
-
-      {
-          "animalType": "tiger",
-          "name": "SheerKhan",
-          "birthday": "2nd August 2017."
-      },
-
-      {
-          "animalType": "bear",
-          "name": "Grizly",
-          "birthday": "15th February 2017."
-      },
-
-      {
-          "animalType": "lion",
-          "name": "King"
-      },
+      new Animal("cow", "redcow", "2017"),
+      new Animal("dog", "jackie", "1999"),
+      new Animal("cat", "meow", "1998"),
+      new Animal("tiger", "sheerkhan", "2000"),
+      new Animal("lion", "king")
 
   ]
 

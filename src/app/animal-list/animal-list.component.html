@@ -6,10 +6,10 @@
 			<td>Birthday</td>
 		</tr>
 		<tr *ngFor="let animal of animals; let index = index">
-			<td>{{ animal.animalType }}</td>
+			<td>{{ animal.species }}</td>
 			<td>{{ animal.name }}</td>
-			<td *ngIf="animal.birthday">{{ animal.birthday }}</td>
-			<td *ngIf="!animal.birthday">Unknown</td>
+			<td *ngIf="animal.dateOfBirth">{{ animal.dateOfBirth }}</td>
+			<td *ngIf="!animal.dateOfBirth">Unknown</td>
             <td (click)="deleteRow(index)"><button type="button" name="button">Delete</button></td>
 		</tr>
 	</tbody>
