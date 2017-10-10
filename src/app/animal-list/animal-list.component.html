@@ -26,3 +26,17 @@
 		</tr>
 	</tbody>
 </table>
+
+<table >
+	<tbody>
+		<tr>
+			<td>Sector name</td>
+			<td>Sector surface</td>
+		</tr>
+		<tr *ngFor="let sector of sectors; let index = index">
+			<td>{{ sector.name }}</td>
+			<td>{{ sector.surface }}</td>
+            <td (click)="showSectorAnimals(index)"><button type="button" name="button">Show animals in sector</button></td>
+		</tr>
+	</tbody>
+</table>
