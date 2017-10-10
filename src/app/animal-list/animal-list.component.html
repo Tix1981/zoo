@@ -12,11 +12,13 @@
 		<tr>
 			<td>Animal type</td>
 			<td>Name</td>
+			<td>Sector</td>
 			<td>Birthday</td>
 		</tr>
 		<tr *ngFor="let animal of animals; let index = index">
 			<td>{{ animal.species }}</td>
 			<td>{{ animal.name }}</td>
+            <td>{{ animal.sector.name }}</td>
 			<td *ngIf="animal.dateOfBirth">{{ animal.dateOfBirth }}</td>
 			<td *ngIf="!animal.dateOfBirth">Unknown</td>
             <td (click)="moveToTop(index)"><button type="button" name="button">Move to Top</button></td>
